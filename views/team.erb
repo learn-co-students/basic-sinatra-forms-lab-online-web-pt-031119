@@ -5,8 +5,11 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
+ <h1>Team Name: <%= @team.values.first %></h1>
+ #@position = ["Team Name", "Coach", "Point Guard", "Shooting Guard", "Power Forward", "Small Forward", "Center"]
+  <% @team.each do |pos, member| %>
+    <h2><%= "#{pos}: #{member}" %></h2>
+  <% end %>
 
  </body>
 </html>
